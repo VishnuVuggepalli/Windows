@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:mcpmarket.com)",
+      "Bash(cd \"C:/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap\" && find . -type f -name \"*.go\" | xargs wc -l 2>/dev/null | tail -5)",
+      "Bash(cd \"C:/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap\" && find . -type f -name \"*.go\" -exec wc -l {} + | sort -n | tail -15)",
+      "Bash(for dir in \"C:/Users/vishn/awesome-claude-code/resources/slash-commands\"/{act,add-to-changelog,clean,commit,context-prime,create-hook,create-jtbd,create-pr,create-prd,create-prp,create-pull-request,create-worktrees,fix-github-issue,husky,initref,load-llms-txt,optimize,pr-review}; do echo \"=== $\\(basename \"$dir\"\\) ===\"; ls -1 \"$dir\" 2>/dev/null | head -5; done)",
+      "Bash(find \"/c/Users/vishn/awesome-claude-code/resources/claude.md-files\" -name \"*.md\" | xargs grep -l \"Go\\\\|golang\\\\|infrastructure\\\\|docker\\\\|kubernetes\" 2>/dev/null | head -10)",
+      "Bash(cd \"/c/Users/vishn/awesome-claude-code/resources/claude.md-files\" && ls -d */ | sort)",
+      "Bash(wc -l ~/awesome-claude-code/resources/workflows-knowledge-guides/Blogging-Platform-Instructions/* ~/awesome-claude-code/resources/workflows-knowledge-guides/Design-Review-Workflow/* 2>/dev/null)",
+      "Bash(# Install Go project template\ncp ~/awesome-claude-code/resources/claude.md-files/TPL/CLAUDE.md ~/.claude/templates/go-project-template/CLAUDE.md && echo \"Installed: Go project template\"\n\n# Install Design Review workflow\ncp -r ~/awesome-claude-code/resources/workflows-knowledge-guides/Design-Review-Workflow/* ~/.claude/workflows/design-review/ && echo \"Installed: Design Review workflow\"\n\n# Install GitHub Actions workflows\ncp ~/awesome-claude-code/resources/official-documentation/Claude-Code-GitHub-Actions/*.yml ~/.claude/github-actions/ 2>/dev/null && echo \"Installed: GitHub Actions workflows\" || echo \"Checking structure...\"\nls ~/awesome-claude-code/resources/official-documentation/Claude-Code-GitHub-Actions/)",
+      "Bash(find /c/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap -type f -name \"*.go\" | xargs wc -l 2>/dev/null | sort -rn | head -60)",
+      "Bash(find /c/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap -type f \\\\\\( -name \"*.yaml\" -o -name \"*.yml\" -o -name \"*.json\" -o -name \"*.toml\" -o -name \"*.env*\" -o -name \"Makefile\" -o -name \"Dockerfile*\" -o -name \"*.mod\" -o -name \"*.sum\" \\\\\\) | xargs wc -l 2>/dev/null | sort -rn | head -40)",
+      "Bash(cd \"C:/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap\" && find . -name \"*.go\" | sort | xargs wc -l 2>/dev/null | sort -rn | head -50)",
+      "Bash(cd \"C:/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap\" && find . -name \"*.html\" -o -name \"*.js\" -o -name \"*.css\" | sort | xargs wc -l 2>/dev/null | sort -rn)",
+      "Bash(cd \"C:/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap\" && find . -name \"*.go\" | wc -l && find . -name \"*.yaml\" -o -name \"*.yml\" -o -name \"*.json\" -o -name \"*.md\" | sort | xargs wc -l 2>/dev/null | sort -rn | head -30)",
+      "Bash(cd \"C:/Users/vishn/Desktop/Karios/KariosD/karios-bootstrap\" && find . -name \"*.go\" | sort | xargs wc -l 2>/dev/null | sort -rn | tail -40)",
+      "Bash(find /c/Users/vishn -type d -name \"*Karios*\" 2>/dev/null | head -20)",
+      "Bash(cd \"C:\\\\Users\\\\vishn\\\\Desktop\\\\Karios\\\\KariosD\\\\karios-bootstrap\" && go vet ./utils/ 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\vishn\\\\Desktop\\\\Karios\\\\KariosD\\\\karios-bootstrap\" && go test ./utils/ -v 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\vishn\\\\Desktop\\\\Karios\\\\KariosD\\\\karios-bootstrap\" && go build ./... 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\vishn\\\\Desktop\\\\Karios\\\\KariosD\\\\karios-bootstrap\" && go vet ./utils/ ./service/site/ ./service/dns/ 2>&1)"
+    ]
+  }
+}
