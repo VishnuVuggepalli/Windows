@@ -138,7 +138,7 @@ dap.adapters.codelldb = {
 dap.adapters.cppdbg = {
     id = "cppdbg",
     type = "executable",
-    command = "/home/laurenzi/.local/share/nvim/mason/bin/OpenDebugAD7",
+    command = vim.fn.stdpath("data") .. "/mason/bin/OpenDebugAD7",
 }
 
 dap.adapters.node2 = {
