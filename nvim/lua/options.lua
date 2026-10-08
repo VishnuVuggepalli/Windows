@@ -6,7 +6,13 @@ local fn = vim.fn
 vim.g.mapleader = ','
 
 local home = vim.fn.expand("$HOME")
-g.python3_host_prog = home .. "/AppData/Local/Programs/Python/Python311/python.exe"
+-- Keep Windows on its explicit interpreter; everywhere else resolve whatever
+-- python3 is first on PATH. Leaves this file portable across machines.
+if fn.has("win32") == 1 then
+    g.python3_host_prog = home .. "/AppData/Local/Programs/Python/Python311/python.exe"
+else
+    g.python3_host_prog = fn.exepath("python3")
+end
 
 -- g.python3_host_prog = vim.fn.expand("$HOME") .. "/venvs/base/bin/python"
 -- g.python_host_prog = vim.fn.expand("$HOME") .. "/venvs/base27/bin/python"

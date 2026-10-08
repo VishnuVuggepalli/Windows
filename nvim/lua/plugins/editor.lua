@@ -219,7 +219,10 @@ return {
 
     -- {"folke/flash.nvim"}
     {
-        "phaazon/hop.nvim",
+        -- phaazon/hop.nvim was deleted by its author (GitHub 404), which made git
+        -- prompt for credentials and fail the clone. smoka7 is the maintained fork;
+        -- same module name and API, so the config below is unchanged.
+        "smoka7/hop.nvim",
         keys = { { mode = "n", "S" }, { mode = { "n", "x" }, "s" }, { mode = "o", "x" } },
         opts = {
             teasing = false,
@@ -240,6 +243,11 @@ return {
     {
         "ThePrimeagen/refactoring.nvim",
         dependencies = {
+            -- Required by refactoring.nvim itself (see its README): the plugin does
+            -- `require "async"` at load time and nothing else on the runtimepath
+            -- provides that module, so without this it fails with
+            -- "module 'async' not found".
+            "lewis6991/async.nvim",
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
         },
